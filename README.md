@@ -1,5 +1,8 @@
 # Code Editor IDE for Android
 
+![Android CI](https://github.com/taufiksoleh/coder/workflows/Android%20CI/badge.svg)
+![Release](https://github.com/taufiksoleh/coder/workflows/Android%20Release%20Build/badge.svg)
+
 A modern, feature-rich code editor IDE for Android built entirely with Jetpack Compose.
 
 ## Features
@@ -103,6 +106,49 @@ cd CodeEditorIDE
 ```
 
 Or click the "Run" button in Android Studio.
+
+## CI/CD Pipeline
+
+The project includes a comprehensive GitHub Actions CI/CD pipeline:
+
+### Automated Workflows
+
+**Continuous Integration (android-ci.yml)**
+- Triggered on push to `main` and `claude/**` branches
+- Runs build, lint, and unit tests
+- Generates debug APK
+- Uploads artifacts and reports
+
+**Release Build (android-release.yml)**
+- Triggered on version tags (`v*`) or manual dispatch
+- Builds signed release APK and AAB
+- Creates GitHub releases automatically
+
+**Pull Request Checks (pr-checks.yml)**
+- Code quality validation with ktlint
+- APK size monitoring (fails if > 100 MB)
+- Automated PR comments with build status
+
+**Dependency Review (dependency-review.yml)**
+- Security vulnerability scanning
+- Blocks PRs with moderate+ severity issues
+
+### Automated Dependency Updates
+
+**Dependabot** is configured to:
+- Update Gradle dependencies weekly
+- Update GitHub Actions weekly
+- Auto-label and assign PRs
+
+### Creating a Release
+
+```bash
+# Tag and push
+git tag -a v1.0.0 -m "Release version 1.0.0"
+git push origin v1.0.0
+```
+
+See [CI/CD Pipeline Documentation](docs/CI-CD-PIPELINE.md) for detailed setup instructions.
 
 ## Development
 
