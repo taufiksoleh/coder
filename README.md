@@ -157,6 +157,16 @@ git push origin v1.0.0
 
 See [CI/CD Pipeline Documentation](docs/CI-CD-PIPELINE.md) for detailed setup instructions.
 
+### Repository Setup
+
+To enable all CI/CD features (dependency scanning, Dependabot, etc.):
+
+1. Enable **Dependency Graph** in Settings → Security & analysis
+2. Configure **Branch Protection** rules for main branch
+3. Add **Repository Secrets** for release signing (optional)
+
+See [GitHub Repository Setup Guide](docs/GITHUB-REPOSITORY-SETUP.md) for complete instructions.
+
 ## Development
 
 ### Adding a New Language

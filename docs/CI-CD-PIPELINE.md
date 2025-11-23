@@ -94,6 +94,11 @@ KEY_PASSWORD         - Key password
 - 💬 Comment security findings in PR
 - ❌ Fail on moderate or higher severity issues
 
+**Requirements:**
+- Dependency Graph must be enabled in repository settings
+- See [GitHub Repository Setup Guide](GITHUB-REPOSITORY-SETUP.md) for instructions
+- Workflow continues gracefully if feature is not enabled
+
 ## Dependabot Configuration
 
 **Automated dependency updates:**
