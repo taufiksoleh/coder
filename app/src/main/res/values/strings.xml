@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Code Editor IDE</string>
+    <string name="editor">Editor</string>
+    <string name="terminal">Terminal</string>
+    <string name="git">Git</string>
+    <string name="files">Files</string>
+    <string name="settings">Settings</string>
+</resources>
