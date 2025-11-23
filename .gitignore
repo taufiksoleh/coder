@@ -20,6 +20,10 @@ release/
 build/
 */build/
 
+# Gradle wrapper jar will be downloaded automatically by CI
+# or generated locally with: ./gradlew wrapper
+gradle/wrapper/gradle-wrapper.jar
+
 # Local configuration file (sdk path, etc)
 local.properties
 

@@ -6,6 +6,16 @@ This document describes the CI/CD pipeline setup for the Code Editor IDE Android
 
 The project uses **GitHub Actions** for continuous integration and deployment. The pipeline includes automated building, testing, code quality checks, and release management.
 
+## Gradle Wrapper Handling
+
+The Gradle wrapper JAR (`gradle/wrapper/gradle-wrapper.jar`) is **not committed** to the repository for security and repository size reasons. Instead:
+
+- CI workflows automatically download the wrapper JAR if missing
+- Local development uses the setup script: `./setup-gradle.sh`
+- The wrapper properties file is committed to specify the Gradle version
+
+See [Gradle Setup Guide](GRADLE-SETUP.md) for detailed information.
+
 ## Workflows
 
 ### 1. Android CI (`android-ci.yml`)

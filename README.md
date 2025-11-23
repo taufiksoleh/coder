@@ -98,14 +98,21 @@ git clone <repository-url>
 cd CodeEditorIDE
 ```
 
-2. Open in Android Studio (Ladybug | 2024.2.1 or later)
+2. Set up Gradle wrapper (first time only)
+```bash
+./setup-gradle.sh
+```
 
-3. Build and run
+3. Open in Android Studio (Ladybug | 2024.2.1 or later)
+
+4. Build and run
 ```bash
 ./gradlew assembleDebug
 ```
 
 Or click the "Run" button in Android Studio.
+
+See [Gradle Setup Guide](docs/GRADLE-SETUP.md) for detailed setup instructions.
 
 ## CI/CD Pipeline
 
